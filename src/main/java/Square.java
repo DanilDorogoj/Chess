@@ -3,6 +3,12 @@ public class Square {
     private final boolean isWhite;
     private ChessPiece currentPiece; // Какая фигура стоит на клетке. Если null - никакая
 
+    public Square(int x, int y, boolean isWhite) {
+        this.x = x;
+        this.y = y;
+        this.isWhite = isWhite;
+    }
+
     public Square(int x, int y, boolean isWhite, ChessPiece currentPiece) {
         this.x = x;
         this.y = y;
