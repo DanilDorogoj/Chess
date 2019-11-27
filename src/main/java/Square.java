@@ -9,13 +9,6 @@ public class Square {
         this.isWhite = isWhite;
     }
 
-    public Square(int x, int y, boolean isWhite, ChessPiece currentPiece) {
-        this.x = x;
-        this.y = y;
-        this.isWhite = isWhite;
-        this.currentPiece = currentPiece;
-    }
-
     public int getX() {
         return x;
     }
