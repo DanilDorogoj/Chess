@@ -25,15 +25,15 @@ public class Board {
         }
 
         for (int i = 0; i < 8; i++) {
-            squares[6][i].setChessPiece(new Pawn(false));
+            squares[6][i].setChessPiece(new Pawn(true));
         }
-        squares[7][0].setChessPiece(new Rook(false));
-        squares[7][1].setChessPiece(new Knight(false));
-        squares[7][2].setChessPiece(new Bishop(false));
-        squares[7][3].setChessPiece(new Queen(false));
-        squares[7][4].setChessPiece(new King(false));
-        squares[7][5].setChessPiece(new Bishop(false));
-        squares[7][6].setChessPiece(new Knight(false));
-        squares[7][7].setChessPiece(new Rook(false));
+        squares[7][0].setChessPiece(new Rook(true));
+        squares[7][1].setChessPiece(new Knight(true));
+        squares[7][2].setChessPiece(new Bishop(true));
+        squares[7][3].setChessPiece(new Queen(true));
+        squares[7][4].setChessPiece(new King(true));
+        squares[7][5].setChessPiece(new Bishop(true));
+        squares[7][6].setChessPiece(new Knight(true));
+        squares[7][7].setChessPiece(new Rook(true));
     }
 }
