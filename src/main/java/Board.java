@@ -1,5 +1,7 @@
 public class Board {
     private Square[][] squares;
+    private King blackKing;
+    private King whiteKing;
 
     public Board() {
         this.squares = new Square[8][8];
@@ -16,7 +18,8 @@ public class Board {
         squares[0][1].setChessPiece(new Knight(false));
         squares[0][2].setChessPiece(new Bishop(false));
         squares[0][3].setChessPiece(new Queen(false));
-        squares[0][4].setChessPiece(new King(false));
+        blackKing = new King(false);
+        squares[0][4].setChessPiece(blackKing);
         squares[0][5].setChessPiece(new Bishop(false));
         squares[0][6].setChessPiece(new Knight(false));
         squares[0][7].setChessPiece(new Rook(false));
@@ -31,9 +34,43 @@ public class Board {
         squares[7][1].setChessPiece(new Knight(true));
         squares[7][2].setChessPiece(new Bishop(true));
         squares[7][3].setChessPiece(new Queen(true));
-        squares[7][4].setChessPiece(new King(true));
+        whiteKing = new King(true);
+        squares[7][4].setChessPiece(whiteKing);
         squares[7][5].setChessPiece(new Bishop(true));
         squares[7][6].setChessPiece(new Knight(true));
         squares[7][7].setChessPiece(new Rook(true));
+    }
+
+    public void update() {
+
+    }
+
+    public boolean isCheck() {
+        //...
+        return false;
+    }
+
+    public boolean isCheckMate() {
+        //...
+        if (!canAvoid() && !canBlock() && !canGetPiece()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean canGetPiece() {
+        //...
+        return true;
+    }
+
+    public boolean canBlock() {
+        //...
+        return true;
+    }
+
+    public boolean canAvoid() {
+        //...
+        return true;
     }
 }
